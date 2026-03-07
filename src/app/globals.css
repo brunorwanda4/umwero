@@ -1,26 +1,53 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@plugin "daisyui" {
+    /* This enables your custom theme and sets it as the default */
+    themes:
+        umwero --default,
+        dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* 1. Define the colors for Tailwind utilities (e.g., text-primary) */
+@theme {
+    --color-primary: #f9b21b; /* The Sun/Seed Gold */
+    --color-secondary: #65b32e; /* The Leaf Green */
+    --color-accent: #004d00; /* The Text/Dark Green */
+
+    --color-base-100: #ffffff;
+    --color-base-200: #f4f7f5;
+    --color-base-300: #e2e8e5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@plugin "daisyui/theme" {
+    name: "umwero";
+    default: true;
+    prefersdark: false;
+    color-scheme: "dark";
+    --color-base-100: oklch(98% 0.018 155.826);
+    --color-base-200: oklch(92% 0.084 155.995);
+    --color-base-300: oklch(62% 0.194 149.214);
+    --color-base-content: oklch(26% 0.065 152.934);
+    --color-primary: #f9b21b;
+    --color-primary-content: oklch(97% 0.014 343.198);
+    --color-secondary: #65b32e;
+    --color-secondary-content: oklch(100% 0 0);
+    --color-accent: #004d00;
+    --color-accent-content: oklch(100% 0 0);
+    --color-neutral: oklch(37% 0.034 259.733);
+    --color-neutral-content: oklch(98% 0.003 247.858);
+    --color-info: #0ea5e9;
+    --color-info-content: oklch(98% 0.003 247.858);
+    --color-success: oklch(72% 0.219 149.579);
+    --color-success-content: oklch(98% 0.003 247.858);
+    --color-warning: oklch(55% 0.135 66.442);
+    --color-warning-content: oklch(98% 0.026 102.212);
+    --color-error: oklch(57% 0.245 27.325);
+    --color-error-content: oklch(98% 0.003 247.858);
+    --radius-selector: 2rem;
+    --radius-field: 2rem;
+    --radius-box: 2rem;
+    --size-selector: 0.28125rem;
+    --size-field: 0.28125rem;
+    --border: 0.5px;
+    --depth: 1;
+    --noise: 0;
 }
