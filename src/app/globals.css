@@ -94,5 +94,9 @@
 }
 
 .p {
-    @apply text-base text-base-content/80;
+    @apply text-xl text-base-content/80;
+}
+
+.p-accent {
+    @apply text-xl  text-accent-content/80;
 }

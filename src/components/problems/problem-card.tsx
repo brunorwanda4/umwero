@@ -17,6 +17,8 @@ interface ProblemCardProps {
   index?: number;
   height?: number;
   className?: string;
+  handleOpen?: (id?: string) => void;
+  id?: string;
 }
 
 const ProblemCard = ({
@@ -26,6 +28,8 @@ const ProblemCard = ({
   index,
   className,
   height = 340,
+  handleOpen,
+  id,
 }: ProblemCardProps) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const cardRef = useRef<HTMLDivElement>(null);
@@ -101,7 +105,12 @@ const ProblemCard = ({
         <div className="absolute bottom-0 left-0 right-0 bg-accent/30  p-4 text-white">
           <div className="flex justify-between items-center">
             {/*TODO: onClick open dialog*/}
-            <span className="font-bold text-lg leading-tight">{title}</span>
+            <span
+              onClick={() => handleOpen?.(id)}
+              className="font-bold text-lg leading-tight"
+            >
+              {title}
+            </span>
             {index !== undefined && (
               <span className="text-xs opacity-70 font-mono">
                 {index < 10 ? `0${index}` : index}
@@ -120,7 +129,11 @@ const ProblemCard = ({
           {description}
         </p>
 
-        <button type="button" className={cn("btn btn-secondary")}>
+        <button
+          onClick={() => handleOpen?.(id)}
+          type="button"
+          className={cn("btn btn-secondary")}
+        >
           Learn More
         </button>
       </div>
