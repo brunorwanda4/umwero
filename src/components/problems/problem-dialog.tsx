@@ -58,15 +58,17 @@ export const ProblemDialog = ({
           />
         </div>
 
-        <div className="flex flex-col gap-6  p-4 pt-0">
+        <div className="flex flex-col gap-6  p-4">
           <section className=" flex flex-col gap-2">
-            <h2 className="h2">{problem?.title ?? ""}</h2>
-            <p className=" p-accent">{problem?.description ?? ""}</p>
-            <div className=" bg-secondary p-2 rounded-lg shadow-lg">
+            <h3 className="h3">{problem?.title ?? ""}</h3>
+            <p className=" text-accent-content/80 text-base">
+              {problem?.description ?? ""}
+            </p>
+            <div className=" bg-secondary text-accent-content p-2 text-base rounded-lg shadow-lg">
               {problem?.status}
             </div>
             <div className=" flex flex-col gap-1">
-              <span>Source:</span>
+              <span className=" text-base">Source:</span>
               <div className=" badge">{problem?.source}</div>
             </div>
           </section>

@@ -37,7 +37,8 @@ export const problems = [
     title: "Lack of Nutrient Knowledge",
     description:
       "Healthy crops depend on proper soil nutrients, but many farmers lack tools to analyze soil conditions or understand what nutrients their crops require.",
-    status: "Only about 18% of farmers in Rwanda used improved seeds in some seasons",
+    status:
+      "Only about 18% of farmers in Rwanda used improved seeds in some seasons",
     source: "National Institute of Statistics of Rwanda",
     image: "/jpg/problem-8.jpg",
   },
@@ -57,7 +58,7 @@ const KeyProblem = () => {
 
   const getSelectedProblem = (
     problemId: string | null,
-    problems: Problem[]
+    problems: Problem[],
   ): Problem | null => {
     if (problemId === null) {
       return null;
@@ -79,7 +80,7 @@ const KeyProblem = () => {
   const selectedProblem = getSelectedProblem(openProblem, problems);
 
   return (
-    <main className="card  p-8  bg-base-200 min-h-96 text-base-content shadow-xl shadow-accent/20 space-y-8">
+    <main className="card  p-8  bg-base-200 min-h-96 border border-accent text-base-content shadow-xl shadow-accent/20 space-y-8">
       <h1 className="h2">Key Problems</h1>
       <div className=" grid grid-cols-2 gap-4">
         {problems.map((problem, index) => (
