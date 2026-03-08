@@ -9,7 +9,7 @@ export default function Problem() {
   return (
     <section
       id="problem"
-      className=" bg-gradient-to-b from-80% to-20%   from-accent text-accent-content px-20 py-10 space-y-12"
+      className=" bg-linear-to-b from-70% to-30%   from-accent text-accent-content px-20 py-10 space-y-18"
     >
       <div className=" flex gap-8 items-center">
         <div className=" w-1/2 text-lg">

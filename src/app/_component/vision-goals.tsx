@@ -39,7 +39,7 @@ const VisionGoals = () => {
             className={cn(
               " cursor-pointer",
               active === index &&
-                "border-secondary p-4 py-6 shadow-xl rounded-md border-l-6 ",
+                "border-secondary p-4 py-6 shadow-xl rounded-md border-l-6",
             )}
             onClick={() => handleGoalClick(index)}
           >
