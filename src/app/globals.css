@@ -92,3 +92,7 @@
 .h6 {
     @apply text-sm font-medium;
 }
+
+.p {
+    @apply text-base text-base-content/80;
+}
