@@ -129,7 +129,7 @@ function NavLink({ section, isActive, onClick }: NavLinkProps) {
   return (
     <Link
       href={section.href}
-      className="space-y-1 flex-col flex btn btn-ghost hover:text-secondary relative"
+      className="space-y-1 flex-col flex btn btn-ghost hover:text-secondary relative hover:bg-none"
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
       onClick={handleClick}

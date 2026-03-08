@@ -11,15 +11,10 @@ export default function Home() {
     <main className=" min-h-screen flex flex-col px-20">
       <Navbar />
       <Hero />
-      <div className=" h-20" />
       <Vision />
-      <div className=" h-20" />
       <Problem />
-      <div className=" h-20" />
       <Solution />
-      <div className=" h-20" />
       <HowItWork />
-      <div className=" h-20" />
       <Impact />
     </main>
   );
