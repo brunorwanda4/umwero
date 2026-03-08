@@ -48,7 +48,13 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
         aria-label="Main navigation"
       >
         <Link href={"/"} className=" flex gap-2 items-center">
-          <Image src="/logo.png" alt="Umwero Logo" width={28} height={28} />
+          <Image
+            priority
+            src="/logo.png"
+            alt="Umwero Logo"
+            width={28}
+            height={28}
+          />
           <h1 className="text-2xl font-bold text-accent">UMWERO</h1>
         </Link>
         <ul className="flex gap-2">
