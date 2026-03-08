@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Apple&display=swap");
 @import "tailwindcss";
+@import "tw-animate-css";
 @plugin "daisyui" {
     /* This enables your custom theme and sets it as the default */
     themes:
@@ -50,4 +52,19 @@
     --border: 0.5px;
     --depth: 1;
     --noise: 0;
+    --font-family: "Apple", sans-serif;
+}
+
+@theme inline {
+    --font-apple: "Apple", sans-serif;
+}
+
+:root {
+    --font-apple: "Apple", sans-serif;
+}
+
+@layer base {
+    body {
+        font-family: "Apple", sans-serif;
+    }
 }

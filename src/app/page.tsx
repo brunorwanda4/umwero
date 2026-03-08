@@ -8,7 +8,7 @@ import Vision from "./_component/vision";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen flex flex-col ">
+    <main className=" min-h-screen flex flex-col px-20">
       <Navbar />
       <Hero />
       <div className=" h-20" />
