@@ -1,14 +1,15 @@
 import React from "react";
 import Carousel from "@/components/common/carousel";
+import KeyProblem from "./key-problems";
 
 export default function Problem() {
   const images = [...Array(4)].map((_, i) => ({
     image: `/jpg/problem-${i + 1}.jpg`,
   }));
   return (
-    <div
+    <section
       id="problem"
-      className=" min-h-screen bg-accent text-accent-content px-20 py-10 space-y-12"
+      className=" bg-gradient-to-b from-80% to-20%   from-accent text-accent-content px-20 py-10 space-y-12"
     >
       <div className=" flex gap-8 items-center">
         <div className=" w-1/2 text-lg">
@@ -33,6 +34,7 @@ export default function Problem() {
         </div>
         <Carousel projects={images} className=" w-1/2 h-full" />
       </div>
-    </div>
+      <KeyProblem />
+    </section>
   );
 }
