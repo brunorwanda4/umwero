@@ -1,12 +1,16 @@
 import React from "react";
+import Carousel from "@/components/common/carousel";
 
 export default function Problem() {
+  const images = [...Array(4)].map((_, i) => ({
+    image: `/jpg/problem-${i + 1}.jpg`,
+  }));
   return (
     <div
       id="problem"
       className=" min-h-screen bg-accent text-accent-content px-20 py-10 space-y-12"
     >
-      <div>
+      <div className=" flex gap-8 items-center">
         <div className=" w-1/2 text-lg">
           <h2 className="h1">The Problem</h2>
           <br />
@@ -27,7 +31,7 @@ export default function Problem() {
             can quickly become major losses for farmers.
           </p>
         </div>
-        {/*image*/}
+        <Carousel projects={images} className=" w-1/2 h-full" />
       </div>
     </div>
   );
