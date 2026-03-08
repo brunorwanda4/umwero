@@ -42,7 +42,7 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md px-4 py-2 flex justify-between">
+    <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md  py-2 flex justify-between -mx-20 px-20">
       <nav
         className="flex gap-8 items-center flex-row"
         aria-label="Main navigation"

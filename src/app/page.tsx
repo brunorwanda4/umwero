@@ -12,7 +12,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Vision />
-      <Problem />
+      <div className="-mx-20 pt-20">
+        <Problem />
+      </div>
       <Solution />
       <HowItWork />
       <Impact />

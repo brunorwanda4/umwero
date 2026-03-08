@@ -56,7 +56,7 @@ const VisionGoals = () => {
               src={goals[active].image}
               alt={goals[active].title}
               fill
-              className=" rounded-tl-md rounded-br-md  object-cover"
+              className=" rounded-tl-md rounded-br-md  object-cover shadow-2xl"
             />
           </div>
         </div>
