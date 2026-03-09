@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="  flex ">
-      <div className=" w-1/2 flex flex-col gap-8 items-center pt-12">
+    <section className="  flex flex-col-reverse md:flex-row">
+      <div className=" md:w-1/2 flex flex-col gap-8 items-center pt-12">
         <h1 className=" h1">Smart Crop Health for Rwanda and Africa</h1>
         <p className=" text-xl">
           <span className=" text-secondary">UMWERO</span> is a smart agriculture
@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div>
+      <div className="max-md:grid max-md:place-items-center">
         <div className=" relative size-100  ">
           <Image src="/png/phone.png" alt="Phone " fill />
         </div>
