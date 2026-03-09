@@ -11,8 +11,8 @@ import type { NavSection } from "@/types/navigation";
 const DEFAULT_SECTIONS: NavSection[] = [
   { id: "vision", label: "Vision", href: "#vision" },
   { id: "problem", label: "Problem", href: "#problem" },
-  { id: "how-it-works", label: "How It Works", href: "#how-it-works" },
   { id: "solution", label: "Solution", href: "#solution" },
+  { id: "how-it-works", label: "How It Works", href: "#how-it-works" },
   { id: "impact", label: "Impact", href: "#impact" },
 ];
 
