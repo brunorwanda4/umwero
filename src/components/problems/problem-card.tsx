@@ -108,7 +108,6 @@ const ProblemCard = ({
         {/* Overlay Title - Always visible at bottom of image */}
         <div className="absolute bottom-0 left-0 right-0 bg-accent/30  p-4 text-white">
           <div className="flex justify-between items-center">
-            {/*TODO: onClick open dialog*/}
             <span
               onClick={() => handleOpen?.(id)}
               className="font-bold text-lg leading-tight"

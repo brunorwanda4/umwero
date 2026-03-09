@@ -1,9 +1,9 @@
-import React from "react";
+import KeyFeatures from "@/components/solutions/key-features";
 
 export default function Solution() {
   return (
-    <div id="solution" className=" min-h-screen">
-      solution
+    <div id="solution" className=" min-h-screen ">
+      <KeyFeatures />
     </div>
   );
 }
