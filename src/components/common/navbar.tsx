@@ -8,7 +8,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { cn } from "@/lib/utils";
 import type { NavSection } from "@/types/navigation";
 
-const DEFAULT_SECTIONS: NavSection[] = [
+export const DEFAULT_SECTIONS: NavSection[] = [
   { id: "vision", label: "Vision", href: "#vision" },
   { id: "problem", label: "Problem", href: "#problem" },
   { id: "solution", label: "Solution", href: "#solution" },
