@@ -48,12 +48,21 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md py-2 px-4 md:px-20 -mx-4 md:-mx-20">
+    <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md py-2 px-4 lg:px-20 -mx-4 lg:-mx-20">
       <div className="mx-auto flex items-center justify-between ">
-
+        <Link href={"/"} className=" gap-2 items-center lg:hidden flex">
+          <Image
+            priority
+            src="/logo.png"
+            alt="Umwero Logo"
+            width={28}
+            height={28}
+          />
+          <h1 className="text-2xl font-bold text-accent">UMWERO</h1>
+        </Link>
         {/* Desktop navigation */}
         <nav
-          className="hidden md:flex items-center gap-8"
+          className="hidden lg:flex items-center gap-8"
           aria-label="Main navigation"
         >
         <Link href={"/"} className="flex gap-2 items-center">
@@ -78,14 +87,14 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
             ))}
           </ul>
         </nav>
-          <Link href={"#contact-us"} className="btn btn-primary">
+          <Link href={"#contact-us"} className="btn btn-primary lg:block hidden">
             Join the Project
           </Link>
 
         {/* Mobile menu toggle */}
         <button
           type="button"
-          className="md:hidden btn btn-ghost btn-cicle"
+          className="lg:hidden btn btn-ghost btn-cicle"
           aria-label="Open navigation menu"
           onClick={() => setMobileMenuOpen((open) => !open)}
         >
@@ -95,7 +104,7 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
 
       {/* Mobile navigation overlay */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-50 bg-base-100 backdrop-blur-sm shadow h-screen w-full">
+        <div className="lg:hidden fixed inset-0 z-50 bg-base-100 backdrop-blur-sm shadow h-screen w-full">
           <div className="flex items-center justify-between p-4 max-w-5xl mx-auto bg-base-100">
             <Link href={"/"} className="flex gap-2 items-center" onClick={() =>closeMobileMenu()}>
               <Image
