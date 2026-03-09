@@ -1,5 +1,6 @@
 import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/navbar";
+import ScrollToTop from "@/components/common/scroll-to-top";
 import ContactUs from "./_component/contact-us";
 import Hero from "./_component/hero";
 import HowItWork from "./_component/how-it-works";
@@ -24,6 +25,7 @@ export default function Home() {
       <div className="-mx-20 pt-20">
         <Footer />
       </div>
+      <ScrollToTop />
     </main>
   );
 }

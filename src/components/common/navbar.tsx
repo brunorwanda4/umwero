@@ -70,7 +70,7 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
         </ul>
       </nav>
       <div>
-        <Link href={"/"} className="btn btn-primary ">
+        <Link href={"#contact-us"} className="btn btn-primary ">
           Join the Project
         </Link>
       </div>
