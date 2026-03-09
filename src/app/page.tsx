@@ -1,3 +1,4 @@
+import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/navbar";
 import ContactUs from "./_component/contact-us";
 import Hero from "./_component/hero";
@@ -20,6 +21,9 @@ export default function Home() {
       <HowItWork />
       <Impact />
       <ContactUs />
+      <div className="-mx-20 pt-20">
+        <Footer />
+      </div>
     </main>
   );
 }
