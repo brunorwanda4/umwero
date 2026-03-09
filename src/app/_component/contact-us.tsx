@@ -3,10 +3,10 @@ import ContactForm from "@/components/contact/contact-form";
 
 export default function ContactUs() {
   return (
-    <section id="contact-us" className="min-h-screen space-y-12 pt-20">
-      <div className=" space-y-12 ">
+    <section id="contact-us" className="min-h-screen flex flex-col gap-12 pt-20">
+      <div className="flex flex-col gap-12">
         <h1 className="h2 text-center">Invitation for Ideas and Support</h1>
-        <div className=" flex gap-8">
+        <div className=" flex flex-col md:flex-row gap-8">
           <div className="">
             <p className="p max-w-xl">
               If you have any ideas, suggestions, or feedback that could help

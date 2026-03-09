@@ -80,9 +80,9 @@ const KeyProblem = () => {
   const selectedProblem = getSelectedProblem(openProblem, problems);
 
   return (
-    <main className="card  p-8  bg-base-200 min-h-96 border border-accent text-base-content shadow-xl shadow-accent/20 space-y-8">
+    <main className="card  md:p-8 p-4  bg-base-200 min-h-96 border border-accent text-base-content shadow-xl shadow-accent/20 space-y-8">
       <h1 className="h2">Key Problems</h1>
-      <div className=" grid grid-cols-2 gap-4">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
         {problems.map((problem, index) => (
           <ProblemCard
             key={problem.id}

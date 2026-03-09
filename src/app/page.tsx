@@ -15,9 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Vision />
-      <div className="-mx-4 md:-mx-20 pt-20">
         <Problem />
-      </div>
       <Solution />
       <HowItWork />
       <Impact />

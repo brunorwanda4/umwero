@@ -31,15 +31,15 @@ const VisionGoals = () => {
     setActive(index);
   };
   return (
-    <main className=" flex gap-4">
-      <div className=" space-y-8 w-1/3">
+    <main className=" flex flex-col-reverse md:flex-row md:gap-4 gap-8">
+      <div className=" space-y-8 md:w-1/3">
         {goals.map((goal, index) => (
           <div
             key={`${index}-${goal.title}`}
             className={cn(
               " cursor-pointer",
               active === index &&
-                "border-secondary p-4 py-6 shadow-xl rounded-md border-l-6",
+                "border-secondary p-4 py-6  rounded-md border-l-6",
             )}
             onClick={() => handleGoalClick(index)}
           >
@@ -49,14 +49,14 @@ const VisionGoals = () => {
         ))}
       </div>
       {/*images*/}
-      <div className=" w-2/3">
-        <div className="bg-base-200 h-full rounded-xl p-8 pr-0 pb-0">
+      <div className=" md:w-2/3 w-full max-md:h-80">
+        <div className="bg-base-200 h-full rounded-(--radius-box) p-8 pr-0 pb-0">
           <div className=" w-full h-full relative">
             <Image
               src={goals[active].image}
               alt={goals[active].title}
               fill
-              className=" rounded-tl-md rounded-br-md  object-cover shadow-2xl"
+              className=" rounded-tl-xl rounded-br-(--radius-box)  object-cover shadow-2xl"
             />
           </div>
         </div>

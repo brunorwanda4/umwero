@@ -4,13 +4,13 @@ import { howItWorksSteps } from "./how-it-works-steps";
 
 export default function HowItWorksProcessSteps() {
   return (
-    <main className=" grid grid-cols-2 gap-12">
+    <main className=" grid grid-cols-1 md:grid-cols-2 gap-12">
       {howItWorksSteps.map((step, index) => (
         <article
           key={`${index}-${step.title}`}
           className={cn(
-            "flex flex-col gap-4",
-            index % 2 === 0 && " flex-col-reverse",
+            "flex flex-col md:gap-4 gap-8",
+            index % 2 === 0 && " md:flex-col-reverse",
           )}
         >
           <div className=" relative h-60 min-w-80  w-full">

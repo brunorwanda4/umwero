@@ -82,10 +82,11 @@ const ProblemCard = ({
       onClick={isMobile ? toggle : undefined}
       className={cn(
         "group relative overflow-hidden cursor-pointer bg-card text-card-foreground shadow-sm transition-all",
-        index === 1 && " rounded-tl-(--radius-box)",
-        index === 2 && " rounded-tr-(--radius-box)",
-        index === 3 && " rounded-bl-(--radius-box)",
-        index === 4 && " rounded-br-(--radius-box)",
+        index === 1 && " md:rounded-tl-(--radius-box)",
+        index === 2 && " md:rounded-tr-(--radius-box)",
+        index === 3 && " md:rounded-bl-(--radius-box)",
+        index === 4 && " md:rounded-br-(--radius-box)",
+        "max-md:rounded-(--radius-box)",
         className,
       )}
       style={{ height: h }}
