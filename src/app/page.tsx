@@ -1,5 +1,5 @@
 import Navbar from "@/components/common/navbar";
-import KeyProblem from "../components/problems/key-problems";
+import ContactUs from "./_component/contact-us";
 import Hero from "./_component/hero";
 import HowItWork from "./_component/how-it-works";
 import Impact from "./_component/impact";
@@ -19,6 +19,7 @@ export default function Home() {
       <Solution />
       <HowItWork />
       <Impact />
+      <ContactUs />
     </main>
   );
 }

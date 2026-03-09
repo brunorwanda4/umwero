@@ -1,4 +1,3 @@
-import React from "react";
 import VisionGoals from "./vision-goals";
 
 export default function Vision() {
