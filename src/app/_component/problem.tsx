@@ -8,7 +8,7 @@ export default function Problem() {
   return (
     <section
       id="problem"
-      className=" bg-linear-to-b from-70% to-30%   from-accent p-accent px-4 md:px-20 py-10 pt-20 space-y-18 -mx-4 md:-mx-20 "
+      className=" bg-linear-to-b from-70% to-30%   from-accent p-accent px-4 md:px-20 py-10 pt-20 space-y-18 -mx-4 md:-mx-20  mt-20"
     >
       <div className=" flex flex-col-reverse md:flex-row gap-8 items-center">
         <div className=" md:w-1/2 text-lg">

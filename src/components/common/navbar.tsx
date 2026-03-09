@@ -50,6 +50,12 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
   return (
     <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md py-2 px-4 md:px-20 -mx-4 md:-mx-20">
       <div className="mx-auto flex items-center justify-between ">
+
+        {/* Desktop navigation */}
+        <nav
+          className="hidden md:flex items-center gap-8"
+          aria-label="Main navigation"
+        >
         <Link href={"/"} className="flex gap-2 items-center">
           <Image
             priority
@@ -60,12 +66,6 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
           />
           <h1 className="text-2xl font-bold text-accent">UMWERO</h1>
         </Link>
-
-        {/* Desktop navigation */}
-        <nav
-          className="hidden md:flex items-center gap-8"
-          aria-label="Main navigation"
-        >
           <ul className="flex gap-2">
             {sections.map((section, index) => (
               <li key={`${section.label}-${index}`}>
@@ -77,10 +77,10 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
               </li>
             ))}
           </ul>
+        </nav>
           <Link href={"#contact-us"} className="btn btn-primary">
             Join the Project
           </Link>
-        </nav>
 
         {/* Mobile menu toggle */}
         <button
