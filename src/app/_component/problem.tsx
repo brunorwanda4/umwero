@@ -1,6 +1,5 @@
-import React from "react";
 import Carousel from "@/components/common/carousel";
-import KeyProblem from "./key-problems";
+import KeyProblem from "../../components/problems/key-problems";
 
 export default function Problem() {
   const images = [...Array(4)].map((_, i) => ({

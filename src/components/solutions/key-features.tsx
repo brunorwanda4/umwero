@@ -128,7 +128,7 @@ const KeyFeatures = () => {
   }, []);
 
   return (
-    <div className="">
+    <main className="">
       <h2 className="h1">Our Solution</h2>
       <div ref={wrapperRef} className=" space-y-8 mt-2">
         <div className=" flex flex-col gap-2">
@@ -190,7 +190,7 @@ const KeyFeatures = () => {
           })}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
