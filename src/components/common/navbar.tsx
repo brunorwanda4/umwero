@@ -135,7 +135,10 @@ function NavLink({ section, isActive, onClick }: NavLinkProps) {
   return (
     <Link
       href={section.href}
-      className="space-y-1 flex-col flex btn btn-ghost hover:text-secondary relative hover:bg-none "
+      className={cn(
+        "space-y-1 flex-col flex btn btn-ghost hover:text-secondary relative hover:bg-none ",
+        isActive && "text-secondary",
+      )}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
       onClick={handleClick}
@@ -145,7 +148,7 @@ function NavLink({ section, isActive, onClick }: NavLinkProps) {
       <span>{section.label}</span>
       <div
         ref={lineRef}
-        className={cn("h-0.5 w-full bg-secondary", isActive && "bg-secondary")}
+        className={cn("h-0.5 w-full bg-secondary")}
         style={{ transformOrigin: "left center", transform: "scaleX(0)" }}
       />
       {/*{isActive && (
