@@ -3,10 +3,12 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { memo, useCallback, useMemo, useRef } from "react";
+import { memo, useCallback, useMemo, useRef, useState } from "react";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { cn } from "@/lib/utils";
 import type { NavSection } from "@/types/navigation";
+import { CiMenuBurger } from "react-icons/ci";
+import { BsX } from "react-icons/bs";
 
 export const DEFAULT_SECTIONS: NavSection[] = [
   { id: "vision", label: "Vision", href: "#vision" },
@@ -41,13 +43,14 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
     }
   }, []);
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
-    <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md  py-2 flex justify-between -mx-20 px-20">
-      <nav
-        className="flex gap-8 items-center flex-row"
-        aria-label="Main navigation"
-      >
-        <Link href={"/"} className=" flex gap-2 items-center">
+    <header className="sticky top-0 z-50 bg-base-100/80 backdrop-blur-md py-2 px-4 md:px-20 -mx-4 md:-mx-20">
+      <div className="mx-auto flex items-center justify-between ">
+        <Link href={"/"} className="flex gap-2 items-center">
           <Image
             priority
             src="/logo.png"
@@ -57,23 +60,86 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
           />
           <h1 className="text-2xl font-bold text-accent">UMWERO</h1>
         </Link>
-        <ul className="flex gap-2">
-          {sections.map((section, index) => (
-            <li key={`${section.label}-${index}`}>
-              <NavLink
-                section={section}
-                isActive={activeSection === section.id}
-                onClick={handleSmoothScroll}
-              />
-            </li>
-          ))}
-        </ul>
-      </nav>
-      <div>
-        <Link href={"#contact-us"} className="btn btn-primary ">
-          Join the Project
-        </Link>
+
+        {/* Desktop navigation */}
+        <nav
+          className="hidden md:flex items-center gap-8"
+          aria-label="Main navigation"
+        >
+          <ul className="flex gap-2">
+            {sections.map((section, index) => (
+              <li key={`${section.label}-${index}`}>
+                <NavLink
+                  section={section}
+                  isActive={activeSection === section.id}
+                  onClick={handleSmoothScroll}
+                />
+              </li>
+            ))}
+          </ul>
+          <Link href={"#contact-us"} className="btn btn-primary">
+            Join the Project
+          </Link>
+        </nav>
+
+        {/* Mobile menu toggle */}
+        <button
+          type="button"
+          className="md:hidden btn btn-ghost btn-cicle"
+          aria-label="Open navigation menu"
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+        <CiMenuBurger size={20}/>
+        </button>
       </div>
+
+      {/* Mobile navigation overlay */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-50 bg-base-100 backdrop-blur-sm shadow h-screen w-full">
+          <div className="flex items-center justify-between p-4 max-w-5xl mx-auto bg-base-100">
+            <Link href={"/"} className="flex gap-2 items-center" onClick={() =>closeMobileMenu()}>
+              <Image
+                priority
+                src="/logo.png"
+                alt="Umwero Logo"
+                width={28}
+                height={28}
+              />
+              <h1 className="text-2xl font-bold text-accent">UMWERO</h1>
+            </Link>
+            <button
+              type="button"
+              className="btn btn-ghost"
+              aria-label="Close navigation menu"
+              onClick={closeMobileMenu}
+            >
+             <BsX size={20} />
+            </button>
+          </div>
+          <nav className="p-4 space-y-4 bg-base-100">
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                className="w-full text-left btn btn-ghost text-start justify-start"
+                onClick={() => {
+                  handleSmoothScroll(section.id);
+                  closeMobileMenu();
+                }}
+                type="button"
+              >
+                {section.label}
+              </button>
+            ))}
+            <Link
+              href={"#contact-us"}
+              className="btn btn-primary w-full"
+              onClick={closeMobileMenu}
+            >
+              Join the Project
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

@@ -3,7 +3,7 @@ import ContactForm from "@/components/contact/contact-form";
 
 export default function ContactUs() {
   return (
-    <section id="contact-us" className="min-h-screen space-y-12">
+    <section id="contact-us" className="min-h-screen space-y-12 pt-20">
       <div className=" space-y-12 ">
         <h1 className="h2 text-center">Invitation for Ideas and Support</h1>
         <div className=" flex gap-8">

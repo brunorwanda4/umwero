@@ -11,18 +11,18 @@ import Vision from "./_component/vision";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen flex flex-col px-20 relative">
+    <main className="min-h-screen flex flex-col px-4 md:px-20 relative">
       <Navbar />
       <Hero />
       <Vision />
-      <div className="-mx-20 pt-20">
+      <div className="-mx-4 md:-mx-20 pt-20">
         <Problem />
       </div>
       <Solution />
       <HowItWork />
       <Impact />
       <ContactUs />
-      <div className="-mx-20 pt-20">
+      <div className="-mx-4 md:-mx-20 pt-20">
         <Footer />
       </div>
       <ScrollToTop />
