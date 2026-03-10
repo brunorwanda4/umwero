@@ -53,7 +53,7 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
         <Link href={"/"} className=" gap-2 items-center lg:hidden flex">
           <Image
             priority
-            src="/logo.png"
+            src="/logo.svg"
             alt="Umwero Logo"
             width={28}
             height={28}
@@ -68,7 +68,7 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
         <Link href={"/"} className="flex gap-2 items-center">
           <Image
             priority
-            src="/logo.png"
+            src="/logo.svg"
             alt="Umwero Logo"
             width={28}
             height={28}
@@ -109,7 +109,7 @@ const Navbar = ({ sections = DEFAULT_SECTIONS }: NavbarProps) => {
             <Link href={"/"} className="flex gap-2 items-center" onClick={() =>closeMobileMenu()}>
               <Image
                 priority
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Umwero Logo"
                 width={28}
                 height={28}

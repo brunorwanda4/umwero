@@ -1,20 +1,10 @@
 "use client";
 import Link from "next/link";
-import { useCallback, useMemo } from "react";
-import { BsInstagram } from "react-icons/bs";
-import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { useCallback,  } from "react";
 import { DEFAULT_SECTIONS } from "./navbar";
 import Image from "next/image";
 
 const Footer = () => {
-  const sectionIds = useMemo(
-    () => DEFAULT_SECTIONS.map((section) => section.id),
-    [DEFAULT_SECTIONS],
-  );
-
-  // Track active section using scroll spy hook
-  const { activeSection } = useScrollSpy({ sectionIds });
-
   // Smooth scroll handler - memoized to prevent unnecessary re-renders
   const handleSmoothScroll = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -31,7 +21,7 @@ const Footer = () => {
         <Link href={"/"} className="flex gap-2 items-center flex-col">
           <Image
             priority
-            src="/logo.png"
+            src="/logo.svg"
             alt="Umwero Logo"
             width={28}
             height={28}
