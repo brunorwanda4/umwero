@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "UMWERO - AI-Powered Crop Health Intelligence for Africa",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
   },
   description:
     "Helping Africa grow healthier crops and secure the future of food. UMWERO provides AI-powered disease detection, real-time crop monitoring, and personalized recommendations for African farmers.",

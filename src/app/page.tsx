@@ -11,7 +11,7 @@ import Vision from "./_component/vision";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col px-4 md:px-20 relative">
+    <main className="min-h-screen flex flex-col px-4 md:px-20 relative max-w-7xl mx-auto">
       <Navbar />
       <Hero />
       <Vision />
